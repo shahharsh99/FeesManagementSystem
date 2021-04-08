@@ -1,0 +1,39 @@
+Hi, 
+Here is the next task details.
+
+> Standard 
+ - Add Field
+    > standard
+    > Fees
+ - Add/update/delete Standard
+ - Active/inactive standard
+
+> Student
+ - Add Field
+    > First name
+    > last name
+    > Image (Use Dropzone)
+    > Standard dropdown (Show only active list)
+    > Street
+    > City
+    > Pincode
+ - List
+ - Add/update/delete
+ - Active/inactive student
+
+> Fees Evalution
+    - standard dropdown
+    - student dropdown (list only those student who are selected in above standard dropdown, Not All )
+    - Submit button (on click fees will be submitted for that student)
+
+    Note: If fees already submitted, then disable submit button and show a note (Fees already submitted for this student)
+
+> Dashboard
+     - show report of total submitted fees
+     - show report of total submitted fees standard wise
+    
+    Note : Do not set data in text only. Use Some plugins like charts etc...
+
+
+General Note:
+Use Ladda button, Toaster, Yup validations, Bootstap elements
