@@ -13,11 +13,16 @@ const createStoreWithMiddleware =
     : applyMiddleware(reduxThunk)(createStore);
 
 const store = createStoreWithMiddleware(reducers, window.devToolsExtension ? window.devToolsExtension() : f => f);
+if (process.env.NODE_ENV !== "development")
+  console.log = () => { };
+
+
 
 
 function App() {
   return (
     <Provider store={store}>
+      {console.log("________________________________", process.env.NODE_ENV)}
       <ToastContainer
         position="top-right"
         transition={Flip}
