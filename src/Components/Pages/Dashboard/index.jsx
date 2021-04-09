@@ -32,12 +32,14 @@ const getListStudent =  props => {
         },props);
         
         function fees(){
-            let fees = 0;
+            console.log("*****************", props.totalFeesData);
+            let totalFeesPaid = 0;
             {props.totalFeesData.forEach(data => {
-                fees = fees + data.standardID.fees
-                console.log("@@@@@@@@@@@@",data.standardID.fees,fees);
+                console.log("&&&&&&&&&&&&", data.standardID?.fees);
+                {data.standardID?.fees===undefined ? (totalFeesPaid=totalFeesPaid) : (totalFeesPaid = totalFeesPaid + data.standardID.fees)}
+                
             })}
-            return fees
+            return totalFeesPaid
     }
 
     function standard(){
@@ -93,7 +95,7 @@ const getListStudent =  props => {
                     <p>Total Fees</p>
                     </div>
                     <div className="icon">
-                    <i className="ion ion-bag" />
+                    <i className="fas fa-rupee-sign" />
                     </div>
                     <Link to="/fees-evaluation" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></Link>
                 </div>
@@ -107,7 +109,7 @@ const getListStudent =  props => {
                     <p>Total Standards</p>
                     </div>
                     <div className="icon">
-                    <i className="ion ion-stats-bars" />
+                    <i className="fas fa-university" />
                     </div>
                     <Link to="/standard" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></Link>
                 </div>
@@ -121,7 +123,7 @@ const getListStudent =  props => {
                     <p>Total Students</p>
                     </div>
                     <div className="icon">
-                    <i className="ion ion-person-add" />
+                    <i className="fas fa-user-graduate" />
                     </div>
                     <Link to="/student" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></Link>
                 </div>
@@ -135,7 +137,7 @@ const getListStudent =  props => {
                     <p>Student's Fees Not Paid</p>
                     </div>
                     <div className="icon">
-                    <i className="ion ion-pie-graph" />
+                    <i className="fas fa-file-invoice-dollar" />
                     </div>
                     <Link to="/student" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></Link>
                 </div>
